@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">Taste<span>Haven</span></a>
+        </div>
+        <ul class="nav-links menuList">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#promo">Promo</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons clkBtn">
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Sign Up</button>
+        </div> 
+        <div class="menu-icon">
+            <i class="fas fa-bars" onclick="ToggleMenu()"></i>
+        </div>
+    </header>   
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">TasteHaven</h1>
+            <p class="hero-description">A place where every bite feels divine. Savor the flavors of happiness!"
+
+                Let me know if you'd like it to reflect a specific cuisine or vibe.</p>
+            <button class="btn hero-btn">Order Now</button>
+        </div>
+    </section>
+
+    <section class="best-seller" id="product">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Best Sellers</h2>
+                <p class="section-subtitle">Customer favorite dishes loved for their unbeatable flavor</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="C:\Users\hp\Desktop\download (5).jpg" alt="Lobster Tail" class="dish-img">
+                    </div>
+                    <h3 class="dish-name">Xiaolongbao</h3>
+                    <p class="dish-desc">Delicate steamed dumplings filled with juicy meat and rich broth.</p>
+                    <div class="price-tag">$29.99</div>
+                    <button class="btn dish-btn">Order Now</button>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="C:\Users\hp\Desktop\download (6).jpg" alt="Wild Mushroom Risotto" class="dish-img">
+                    </div>
+                    <h3 class="dish-name">Sweet and sour pork</h3>
+                    <p class="dish-desc">Crispy fried pork tossed in a tangy, fruity sauce with bell peppers .</p>
+                    <div class="price-tag">$19.99</div>
+                    <button class="btn dish-btn">Order Now</button>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="C:\Users\hp\Desktop\download (7).jpg" alt="Spicy Tuna Tartare" class="dish-img">
+                    </div>
+                    <h3 class="dish-name">Kung Pao chicken</h3>
+                    <p class="dish-desc"> A bold stir-fry of tender chicken, crunchy peanuts, and chili peppers.</p>
+                    <div class="price-tag">$24.99</div>
+                    <button class="btn dish-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="oriental-special">
+        <div class="container">
+            <div class="oriental-content">
+                <div class="oriental-text">
+                    <h2 class="section-title">Sweet and sour pork</h2>
+                    <h3 class="dish-highlight">Crispy pork in a tangy-sweet sauce with pineapple and peppers.</h3>
+                    <p class="dish-description">Our signature sushi roll with fresh tuna, avocado, cucumber, and special dragon sauce. Handcrafted by our master sushi chef using traditional techniques.</p>
+                    <div class="price-tag">$14.99</div>
+                    <button class="btn oriental-btn">Order Special</button>
+                </div>
+                <div class="oriental-image">
+                    <img src="C:\Users\hp\Desktop\download (8).jpg" alt="Dragon Roll Sushi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="123">25+</div>
+                    <div class="stat-label">Total Menu Items</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100">15+</div>
+                    <div class="stat-label">Staff Count</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100">5000+</div>
+                    <div class="stat-label">Total Customers Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscription-section">
+        <div class="container">
+            <div class="subscription-content">
+                <div class="subscription-text">
+                    <h2 class="section-title">Heavenly Updates</h2>
+                    <p class="section-subtitle">Stay connected with TasteHeaven. Get the latest flavors, offers, and events in your inbox.</p>
+                </div>
+                <form class="subscription-form" id="subscribeForm">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn subscribe-btn">Subscribe</button>
+                    </div>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="subscriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thank You!</h2>
+            <p>You have successfully subscribed to Havanly Updates .</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Taste<span>Haven</span></h3>
+                    <p class="footer-about"> Where every bite takes you closer to heaven! Experience a delightful journey of flavors crafted with love and passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Menu</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Online Ordering</a></li>
+                        <li><a href="#">Catering Services</a></li>
+                        <li><a href="#">Event Hosting</a></li>
+                        <li><a href="#">Special Promotions</a></li>
+                        <li><a href="#">Delivery Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 231 Food Street, Culinary tokyo</li>
+                        <li><i class="fas fa-phone"></i> (922) 111-2222 </li>
+                        <li><i class="fas fa-envelope"></i> info@tastehavan.com</li>
+                        <li><i class="fas fa-clock"></i> Open Daily: 10PM - 2AM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> TasteHaven. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
